@@ -1,0 +1,50 @@
+Assignment Tasks
+1. Support Vector Machines (SVM) – Decision Boundaries
+Given a dataset where classes are not linearly separable, explain how SVM can still find
+an optimal decision boundary. Discuss the role of the Kernel Trick and compare the
+performance of Linear, Polynomial, and RBF kernels on high-dimensional data.
+Bonus: Implement an SVM model using the dataset provided and compare accuracy with
+different kernels.
+2. Random Forest – Overfitting vs. Generalization
+Explain how Random Forest mitigates overfitting compared to a single Decision Tree.
+Discuss the significance of Bootstrapping and Feature Selection in improving model
+performance.
+Practical Task: Train a Random Forest model on the provided dataset and analyze
+feature importance. Which features contribute most to loan approval?
+3. Confusion Matrix and ROC Curve – Model Evaluation
+A credit scoring model has the following confusion matrix for predicting high default
+risk:
+Predicted ↓ / Actual → Default (1)  No Default (0)
+Default (1)                50         30
+No Default (0)             10        110
+o Calculate Accuracy, Precision, Recall, and F1-Score for this model.
+o Draw the ROC Curve for this model assuming the model provides probability
+scores.
+o Interpretation: What trade-offs are observed in Precision vs. Recall? How would
+you adjust the threshold to reduce false positives?
+4. K-Nearest Neighbors (KNN) – Choosing Optimal K
+In KNN, selecting the appropriate number of neighbors (K) is crucial for achieving a
+good balance between bias and variance. Explain the consequences of choosing a very
+small vs. very large K.
+Task: Implement KNN on the given dataset and use cross-validation to determine the
+
+Buildables Fellowship
+
+optimal K. Analyze how accuracy varies with different values of K.
+5. Bayesian Belief Networks (BBN) – Probabilistic Decision Making
+A bank uses a Bayesian Belief Network to assess the probability of loan default based on
+factors such as income, credit score, and previous defaults.
+o Explain how Conditional Independence can simplify the probability calculations
+in this network.
+o Given prior probabilities, construct a simple Bayesian Network with 3 nodes:
+Loan Approval, Income Level, and Credit Score.
+o Implementation Challenge: Use pgmpy in Python to model a Bayesian
+Network for loan approval. Compute the probability of approval given a high
+income but a low credit score.
+
+Bonus Challenge
+Compare SVM, Random Forest, and KNN on the dataset in terms of accuracy, precision, and
+recall. Which model is the most robust for predicting loan approval and why?
+These challenging questions will test both conceptual understanding and practical
+implementation of machine learning models, evaluation techniques, and Bayesian
+reasoning.
