@@ -1,0 +1,88 @@
+Part 1: Artificial Neural Network (ANN)
+Objective: Implement and train a multi-layer perceptron (MLP) to classify images from the MNIST dataset.
+Steps:
+Data Preprocessing:
+      Load the MNIST dataset using tensorflow.keras.datasets.mnist.
+      Normalize the images (scale pixel values to [0, 1]).
+      Split the dataset into training (80%) and testing (20%) sets.
+Model Building:
+   Create a basic ANN using Keras.
+ ■ Use an input layer with 784 neurons (one per pixel in the MNIST images).
+ ■ Add at least two hidden layers with 128 neurons each and ReLU activation.
+ ■ Add an output layer with 10 neurons (one for each digit, using softmax activation).
+Compile the model using an appropriate optimizer (e.g., Adam) and loss function (e.g., categorical cross-entropy).
+Model Training:
+      Train the ANN for 10 epochs with a batch size of 32.
+      Track training and validation accuracy during training.
+Evaluation:
+   Evaluate the trained model on the test set and report:
+ ■ Accuracy: Overall accuracy on the test set.
+ ■ Confusion Matrix: Display a confusion matrix to visualize the classification performance.
+Plot the training and validation accuracy/loss over epochs.
+Challenges:
+    Experiment with different numbers of hidden layers and neurons to observe how performance changes.
+    Implement early stopping to prevent overfitting. Use a validation set during training to monitor performance.
+
+Part 2: Convolutional Neural Network (CNN)
+Objective: Implement and train a Convolutional Neural Network (CNN) to classify images from the CIFAR-10 dataset.
+Steps:
+Data Preprocessing:
+     Load the CIFAR-10 dataset using tensorflow.keras.datasets.cifar10.
+     Normalize the images (scale pixel values to [0, 1]).
+     Split the dataset into training (80%) and testing (20%) sets.
+Model Building:
+     Create a CNN model using Keras with the following layers:
+ ■ Convolutional Layers: Use at least two convolutional layers with 32 and 64 filters, kernel size of (3, 3), ReLU activation.
+ ■ Pooling Layers: Apply max pooling after each convolutional layer.
+ ■ Flatten Layer: Flatten the feature maps after the last convolutional layer.
+ ■ Fully Connected Layers: Add a fully connected layer with 128 neurons and ReLU activation.
+ ■ Output Layer: Add a softmax output layer with 10 neurons (one for each CIFAR-10 class).
+    Use dropout layers after each fully connected layer to prevent overfitting.
+Model Compilation:
+    Compile the model using the Adam optimizer and categorical cross-entropy loss function.
+Model Training:
+    Train the model for 15 epochs with a batch size of 64.
+    Track training and validation accuracy during training.
+Evaluation:
+    Evaluate the trained model on the test set and report:
+ ■ Accuracy: Overall accuracy on the test set.
+ ■ Confusion Matrix: Display a confusion matrix for performance evaluation.
+ ■ Precision, Recall, and F1-Score: Calculate these metrics for each class.
+Challenges:
+    Experiment with varying the number of convolutional layers, filter sizes, and the number of filters.
+    Implement data augmentation (e.g., random rotations, flipping) to improve generalization and observe how it impacts performance.
+
+Part 3: Transfer Learning with CNNs
+Objective: Implement transfer learning using a pre-trained CNN model on the CIFAR-10 dataset.
+Steps:
+Model Selection:
+     Use a pre-trained model such as VGG16 or ResNet50 from Keras’ applications module.
+Model Customization:
+     Load the pre-trained model without the top layer (i.e., the classifier).
+     Freeze the convolutional layers of the pre-trained model (so they don’t get updated during training).
+     Add your own custom fully connected layers on top, with a softmax output layer to classify the CIFAR-10 classes.
+Model Training:
+     Train the customized model on the CIFAR-10 dataset for 5–10 epochs.
+     Use a lower learning rate for fine-tuning the new fully connected layers.
+Evaluation:
+     Evaluate the performance of the transfer-learned model on the CIFAR-10 test set.
+     Compare the results to the CNN you built from scratch (e.g., accuracy, confusion matrix, precision, recall).
+
+Part 4: Experimentation and Reporting
+Objective:
+Conduct experiments to analyze the impact of different hyperparameters on model performance.
+Steps:
+1. Hyperparameter Tuning:
+Experiment with different batch sizes (e.g., 32, 64, 128) and learning rates (e.g.. 0.001, 0.01, 0.1).
+Test different network architectures by adjusting the number of layers, neurons, or filters.
+Record the training time, accuracy, and loss for each experiment.
+2. Comparison:
+Compare the results of the ANN and CNN models on both MNIST and CIFAR-10 datasets.
+Analyze the trade-offs in terms of model complexity, training time, and performance.
+3. Reporting:
+Write a report summarizing the following:
+An explanation of the models you built.
+Performance metrics (accuracy, loss, precision, recall, etc.).
+Hyperparameter tuning results and conclusions.
+A discussion on the strengths and weaknesses of using ANN vs. CNN for image classification tasks.
+
